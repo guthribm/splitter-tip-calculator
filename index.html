@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <meta name="author" content="Brandon Guthrie" />
+    <meta
+      name="description"
+      content="Tip calculator challenge from frontend mentor that takes in a bill amount and the number of people splitting it and calculates each persons share of the bill with tip."
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        margin-top: 1rem;
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="logo-container">
+      <img id="logo" src="./images/logo.svg" alt="logo" />
+    </header>
+
+    <main class="app-container">
+      <div class="left-container">
+        <div class="bill-total">
+          <label class="label" for="bill">Bill</label>
+          <input type="number" name="bill" id="bill" placeholder="0" />
+        </div>
+
+        <div class="num-people">
+          <p class="label">Number of People</p>
+          <input type="number" id="num-ppl" placeholder="0" />
+        </div>
+
+        <div class="tip-select">
+          <p class="label">Select Tip %</p>
+          <div class="tip-buttons">
+            <button class="btn tip-btn" id="five">5%</button>
+            <button class="btn tip-btn" id="ten">10%</button>
+            <button class="btn tip-btn" id="fifteen">15%</button>
+            <button class="btn tip-btn" id="twenty-five">25%</button>
+            <button class="btn tip-btn" id="fifty">50%</button>
+            <button class="btn tip-btn" id="custom">Custom</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-container">
+        <div class="totals-container">
+          <div class="tip-per totals-sections">
+            <div class="tip-labels">
+              <p class="per-label">Tip Amount</p>
+              <p class="per-person">/ person</p>
+            </div>
+            <div class="outputs" id="tip-amount">$0.00</div>
+          </div>
+
+          <div class="total-per totals-sections">
+            <div class="total-plus-tip-labels">
+              <p class="per-label">Total</p>
+              <p class="per-person">/ person</p>
+            </div>
+
+            <div class="outputs" id="total-plus-tip">$0.00</div>
+          </div>
+
+          <button id="reset-btn" class="btn reset-btn inactive">Reset</button>
+        </div>
+      </div>
+    </main>
+    <div id="overlay">
+      <div id="modal">
+        <label class="modal-input" for="custom-tip">Enter Tip %</label>
+        <input
+          type="number"
+          name="custom-tip"
+          id="custom-tip"
+          placeholder="0"
+        />
+        <p id="submit-btn" class="btn">SUBMIT</p>
+      </div>
+    </div>
+
+    <div role="contentinfo" class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/guthribm"
+        ><h1>Brandon Guthrie</h1></a
+      >.
+    </div>
+    <script defer src="./index.js"></script>
+  </body>
+</html>
